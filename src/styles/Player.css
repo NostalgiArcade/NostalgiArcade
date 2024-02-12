@@ -1,0 +1,63 @@
+.player-card {
+  /* Styles for the overall player card */
+  background-color: #3c096c;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: 300px;
+}
+
+.player-image {
+  /* Styles for the profile image */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.player-info {
+  /* Styles for the player information section */
+  text-align: center;
+}
+
+.player-name {
+  /* Styles for the player's name */
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.player-nickname {
+  /* Styles for the player's nickname (optional) */
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.player-description {
+  /* Styles for the player's description (optional) */
+  font-size: 14px;
+}
+
+.player-stats {
+  /* Styles for the game score section (optional) */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.game-score {
+  /* Styles for the game score display */
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.game-score span {
+  /* Styles for the game score value */
+  font-weight: bold;
+  margin-left: 5px;
+}

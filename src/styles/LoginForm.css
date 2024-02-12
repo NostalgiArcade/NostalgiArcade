@@ -1,0 +1,100 @@
+/* LoginForm.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #ff6d00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: #3c1164;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: 300px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #53316f;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+}
+
+.tiny-icon {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+#forgot-password {
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+  text-shadow: 1px #000;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  margin-left: 180px;
+  display: block;
+}
+
+button {
+  background-color: #c77a15;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+.social-buttons {
+  margin-top: 20px;
+}
+
+.social-button {
+  display: inline-block;
+  background-color: #c77a15;
+  color: #fff;
+  padding: 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+  background-color: #000000;
+}
+
+#signup-link {
+  margin-top: 20px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+#signup-link:hover {
+  color: #c77a15;
+}
