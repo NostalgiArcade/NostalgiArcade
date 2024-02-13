@@ -1,17 +1,16 @@
-import React from "react";
-import Player from "./Player"; // Import Player component
+// import React from "react";
+// import Player from "./Player";
 
-function Profile() {
-  // Replace placeholders with your actual data
-  const playerData = {
-    name: "Player name",
-    nickname: "NICKNAME",
-    description: "A passionate gamer....",
-    gameScore: 12345,
-    profileImage: "path/to/profile.png", // Path to your profile image
-  };
+// function Profile() {
+//   const playerData = {
+//     name: "Player name",
+//     nickname: "NICKNAME",
+//     description: "A passionate gamer....",
+//     gameScore: 12345,
+//     profileImage: "path/to/profile.png",
+//   };
 
-  return <Player {...playerData} />; // Pass data as props to Player component
-}
+//   return <Player {...playerData} />;
+// }
 
-export default Profile;
+// export default Profile;

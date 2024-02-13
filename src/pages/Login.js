@@ -1,8 +1,8 @@
 // LoginForm.js
 import React from "react";
-import "./LoginForm.css";
+import "../styles/Login.css";
 
-class LoginForm extends React.Component {
+class Login extends React.Component {
   login = () => {
     alert("Login button clicked!");
   };
@@ -44,4 +44,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+export default Login;
