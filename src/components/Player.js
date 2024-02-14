@@ -6,16 +6,15 @@ const Player = ({
   nickname,
   description,
   gameScore,
-  profileImage, // Add optional prop for profile image
+  // profileImage,
 }) => {
   return (
     <div className="player-card">
-      {/* Profile image section (conditional rendering) */}
-      {profileImage && (
+      {/* {profileImage && (
         <div className="player-image">
           <img src={profileImage} alt={name} />
         </div>
-      )}
+      )} */}
 
       {/* Profile information section */}
       <div className="player-info">
