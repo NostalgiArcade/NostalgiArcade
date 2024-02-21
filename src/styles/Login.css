@@ -2,8 +2,9 @@
 body {
   margin: 0;
   padding: 0;
+  
   font-family: "Arial", sans-serif;
-  background-color: #ff6d00;
+  background-color: #11113a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +50,7 @@ input {
 }
 
 button {
-  background-color: #c77a15;
+  background-color: #f26837;
   color: #fff;
   padding: 12px;
   border: none;
@@ -70,7 +71,7 @@ button:hover {
 
 .social-button {
   display: inline-block;
-  background-color: #c77a15;
+  background-color: #f26837;
   color: #fff;
   padding: 12px;
   margin: 0 5px;
@@ -96,5 +97,5 @@ button:hover {
 }
 
 #signup-link:hover {
-  color: #c77a15;
+  color: #f26837;
 }
