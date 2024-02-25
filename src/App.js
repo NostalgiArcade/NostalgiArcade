@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Games from "./pages/Games";
 import Login from "./pages/Login";
+import About from "./pages/About";
 import SpaceInvadersGame from "./components/Games/SpaceInvaders";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/games" element={<Games />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
+          <Route path="/About" element={<About />} />
         </Routes>
       </Router>
     </div>
