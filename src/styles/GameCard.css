@@ -1,33 +1,20 @@
 .game-cards {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    justify-content:left; /* Center cards horizontally */
-  }
-  
-  .game-card {
-    flex: 0 0 calc(33.33% - 20px); /* Set the width of each card */
-    margin: 10px; /* Add margin between cards */
-    color: white; /* Change text color */
-  }
-
-  .game-card img {
-    width: 100%; /* Make the image fill the card */
-    border-radius: 8px; /* Rounded corners for the image */
-  }
-
-.game-details {
-  margin-top: 10px;
+  display: flex; 
+  /*flex-wrap: wrap; */
+  max-width: 1000px; /* Limit the maximum width of the game cards */
+  margin: 0 auto; /* Center the game cards horizontally */
+}
+.game-card {
+  flex: 0 0 calc(25% - 20px); /* Adjust the width of each card */
+  margin: 10px; /* Add margin between cards */
+  border-radius: 8px;
+}
+.game-card img {
+  width: 100%;
+  border-radius: 8px;
 }
 
-.game-details h2 {
-  font-size: 1.2em;
+.game-details p.author {
+  font-style:normal ;
 }
 
-.game-details p {
-  font-size: 1em;
-}
-
-.home{
-  color: white; /* Change text color */
-
-}
