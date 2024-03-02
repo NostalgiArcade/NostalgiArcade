@@ -1,4 +1,4 @@
-# To run this file on Mac or Linux, do: source setup.sh, if it doen't work, try: chmod +x setup.sh, then ./setup.sh
+# To run this file on Mac or Linux go to the setup directory in the terminal and do: source setup.sh, if it doen't work, try: chmod +x setup.sh, then ./setup.sh
 
 #!/bin/bash
 

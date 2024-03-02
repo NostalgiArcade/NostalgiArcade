@@ -1,3 +1,5 @@
+# To run this in PowerShell, go to the setup directory in the terminal and do this command: powershell -File "setup.ps1"
+
 # Move back to the root of the project
 Set-Location ..
 
