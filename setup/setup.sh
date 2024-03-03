@@ -22,4 +22,3 @@ cd ..
 npm install
 
 echo "Setup Completed!"
-
