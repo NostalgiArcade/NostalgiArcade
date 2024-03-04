@@ -4,7 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-required("dotenv").config();
+require('dotenv').config();
+
+const username = process.env.DB_USERNAME;
+const password = process.env.DB_PASSWORD;
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
