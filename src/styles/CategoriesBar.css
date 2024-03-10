@@ -1,0 +1,36 @@
+/* categoriesBar.css */
+
+.categoryTitleColor{
+  color: white;
+}
+
+.category-line {
+  border-top: 2px solid white; /* Set the color and thickness of the line */
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.categories-bar {
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 10px;
+  margin-top: 0px; /* Add margin to the top of the category bar */
+}
+
+.category-button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 25px; /* Adjust the border-radius to make the buttons rounded */
+  padding: 8px 16px;
+  transition: background-color 0.3s ease; /* Smooth transition for the background color */
+  margin-right: 40px; /* Adjust the margin to add space between buttons */
+  width: 130px; /* Set the width of the buttons as per your preference */
+}
+
+.category-button:hover {
+  background-color: #f26837; /* Transparent white on hover */
+}
+
+.category-button.active {
+  background-color: #f26837; /* Orange color when button is active */
+}
+

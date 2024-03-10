@@ -8,6 +8,7 @@ function Navbar() {
     <div className="navbar">
       <div className="left_nav">
         <img src={Logo} alt="Logo" />
+        <h3>Nostalgi Arcade</h3>
       </div>
       <div className="right_nav">
         <Link to="/"> Home </Link>
@@ -15,7 +16,7 @@ function Navbar() {
         <Link to="/About"> About Us </Link>
       </div>
       <div className="login_nav">
-        <Link to="/login"> Login </Link>
+        <h3><Link to="/login"> Login </Link></h3>
       </div>
     </div>
   );
