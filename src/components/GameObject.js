@@ -1,12 +1,15 @@
 // /src/components/GameObject.js
 import React from "react";
+import "../styles/GameObject.css";
 
-function GameObject({ image, name, description, onClick }) {
+function GameObject({ image, name, description }) {
   return (
-    <div className="GameObject" onClick={onClick}>
-      <div style={{ backgroundImage: `url(${image})` }}></div>
-      <h1> {name} </h1>
-      <p> {description} </p>
+    <div className="GameObject">
+      <img src={image} alt={name} />
+      <div className="GameDisplay">
+        <h2> {name} </h2>
+        <p> {description} </p>
+      </div>
     </div>
   );
 }
