@@ -18,12 +18,11 @@ function App() {
           <Route path="/games" element={<Games />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
+          <Route path="/games/dinointerface" element={<DinoGame />} />
         </Routes>
       </Router>
     </div>
   );
 }
-
-
 
 export default App;

@@ -10,7 +10,7 @@ function Games() {
       <h1 className="GameLibrary"> Welcome to our NostalgiArcade Project</h1>
       <div className="Gamelist">
         {GameList.map((game, key) => (
-          <Link key={key} to={`/games/${game.name.toLowerCase()}`}>
+          <Link key={key} to={`/games/${game.interface.toLowerCase()}`}>
             <GameObject
               image={game.image}
               name={game.name}
