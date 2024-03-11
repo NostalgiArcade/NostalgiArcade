@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Right Trainer</title>
+    <link class="favicon" rel="icon" type="image/x-icon" href="./CSS/images/favicon-32x32.png">
+</head>
+
+<body>
+    
+    <header class="header">
+        <a href="index.html">
+            <img src="./CSS/images/logo.png" alt="Logo with a dog" id="logo">
+        </a>
+        
+        <nav class="navBar">
+            <a href="#">How it Works</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        
+        <a href="index.html">
+            <button id="loginButton">Back to Login</button>
+        </a>
+        <a href="signup.html">
+            <button id="join">Join for Free</button>
+        </a>
+        
+    </header>
+    
+    <form class="signupForm" id="signupForm">
+        <p class="title">Register </p>
+        <p class="message">Signup now and get full access to our app. </p>
+        <div class="flex">
+            <label>
+                <input required="" placeholder="First Name" type="text" class="input" id="firstNameInput">
+                <span></span>
+            </label>
+            
+            <label>
+                <input required="" placeholder="Last Name" type="text" class="input" id="lastNameInput">
+                <span></span>
+            </label>
+        </div>  
+        
+        <label>
+            <input required="" placeholder="Email" type="email" class="input" id="emailInputSignup">
+            <span></span>
+        </label> 
+        
+        <label>
+            <input required="" placeholder="Password" type="password" class="input" id="passwordInputSignup">
+            <span></span>
+        </label>
+        <label>
+            <input required="" placeholder="Confirm Password" type="password" class="input" id="confirmPasswordInput">
+            <span></span>
+        </label>
+        <button class="submit" id="signupButton">Submit</button>
+        <p class="signin">Already have an acount ? <a href="index.html">Signin</a> </p>
+    </form>
+
+    <script src="signupScript.js"></script>
+</body>
+
+</html>
