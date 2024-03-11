@@ -2,13 +2,18 @@ const express = require('./node_modules/express');
 const mongoose = require('./node_modules/mongoose');
 const bcrypt = require('./node_modules/bcrypt');
 
+require('dotenv').config();
+
+const username = process.env.DB_USERNAME;
+const password = process.env.DB_PASSWORD;
+
 const app = express();
 const port = 3000;
 
 const cors = require('./node_modules/cors');
 app.use(cors());
 
-mongoose.connect(`mongodb+srv://nostalgi:nostalgiEnsign_admin@cluster0.iytvdn7.mongodb.net/?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.iytvdn7.mongodb.net/?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
