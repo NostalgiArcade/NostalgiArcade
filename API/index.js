@@ -13,7 +13,7 @@ const port = 3000;
 const cors = require('./node_modules/cors');
 app.use(cors());
 
-mongoose.connect(`mongodb+srv://username:password@cluster0.iytvdn7.mongodb.net/?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.iytvdn7.mongodb.net/?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
