@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Games from "./pages/Games";
 import Login from "./pages/Login";
+import DinoGame from "./components/Games/DinoGame";
 import SpaceInvadersGame from "./components/Games/SpaceInvaders";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import CategoriesBar from "./components/CategoriesBar";
