@@ -1,5 +1,9 @@
 .navbar {
+
     position: fixed; /* Make the navbar fixed */
+
+  position:fixed; /* Make the navbar fixed */
+
     top: 50px; /* Position it at the top of the viewport */
     left: 50px; /* Add some space from the left side */
     right: 50px; /* Add some space from the right side */
@@ -10,7 +14,11 @@
     padding: 0px 50px; /* Add padding to create space around the content */
     border-radius: 40px; /* Apply border-radius for rounded edges */
     box-shadow: 0 0 12px 8px rgba(255, 106, 0, 0.5); /* Orange ombre effect */
+
 }
+
+  }
+
 
 .left_nav {
     display: flex;

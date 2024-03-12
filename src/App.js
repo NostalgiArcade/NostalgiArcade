@@ -4,11 +4,15 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Games from "./pages/Games";
 import Login from "./pages/Login";
+
 import About from "./pages/About";
+
+import DinoGame from "./components/Games/DinoGame";
+
 import SpaceInvadersGame from "./components/Games/SpaceInvaders";
 import AsteroidsGame from "./components/Games/Asteroids";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import DinoGame from "./components/Games/DinoGame";
+// import CategoriesBar from "./components/CategoriesBar";
 
 function App() {
   return (

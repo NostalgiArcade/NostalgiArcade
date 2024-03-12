@@ -1,0 +1,20 @@
+.game-cards {
+  display: flex; 
+  /*flex-wrap: wrap; */
+  max-width: 1000px; /* Limit the maximum width of the game cards */
+  margin: 0 auto; /* Center the game cards horizontally */
+}
+.game-card {
+  flex: 0 0 calc(25% - 20px); /* Adjust the width of each card */
+  margin: 10px; /* Add margin between cards */
+  border-radius: 8px;
+}
+.game-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.game-details p.author {
+  font-style:normal ;
+}
+
