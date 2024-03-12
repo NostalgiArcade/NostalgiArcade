@@ -8,6 +8,7 @@ import About from "./pages/About";
 import SpaceInvadersGame from "./components/Games/SpaceInvaders";
 import AsteroidsGame from "./components/Games/Asteroids";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import DinoGame from "./components/Games/DinoGame";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
           <Route path="/games/asteroids" element={<AsteroidsGame />} />
           <Route path="/About" element={<About />} />
+          <Route path="/games/dinointerface" element={<DinoGame />} />
         </Routes>
       </Router>
     </div>
