@@ -21,6 +21,7 @@ function App() {
           <Route path="/games" element={<Games />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
+          <Route path="/games/tictactoe" element={<TicTacToe />} />
         </Routes>
         <br />
         <br />
