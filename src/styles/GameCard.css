@@ -1,17 +1,22 @@
 .game-cards {
-  display: flex; 
-  /*flex-wrap: wrap; */
   max-width: 1000px; /* Limit the maximum width of the game cards */
-  margin: 0 auto; /* Center the game cards horizontally */
+  margin: 20px auto; /* Center the game cards horizontally */  
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create four equal-width columns */
+  gap: 20px; /* Add gap between cards */
 }
 .game-card {
   flex: 0 0 calc(25% - 20px); /* Adjust the width of each card */
   margin: 10px; /* Add margin between cards */
   border-radius: 8px;
+  border:2px solid white; /* Add border to each card */
+
 }
 .game-card img {
-  width: 100%;
-  border-radius: 8px;
+  width: 100%; /* Ensure the image fills the entire width of the card */
+  height: 200px; /* Set a fixed height for each image */
+  object-fit: cover; /* Ensure the images maintain their aspect ratio while covering the entire space */
 }
 
 .game-details p.author {

@@ -1,0 +1,68 @@
+/* Styling for the footer */
+.footer {
+    position: relative;
+    left: 20px;
+    right: 20px;
+    background-color: #f26837;
+    color: #fff;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px 8px rgba(255, 106, 0, 0.5);
+  }
+
+
+/* Styling for the content within the footer */
+.footer-content {
+  display: flex; /* Display as flexbox */
+}
+
+/* Styling for each section within the footer */
+.footer-section {
+  flex: 1; /* Each section takes up equal space */
+  margin: 0 20px; /* Margin */
+  list-style: none; /* Remove list bullets */
+}
+
+/* Styling for headings within footer sections */
+.footer-section h2 {
+  font-size: 20px; /* Font size */
+  margin-bottom: 20px; /* Margin bottom */
+}
+
+/* Styling for contact information within the footer */
+.contact span {
+  margin-bottom: 10px; /* Margin bottom */
+}
+
+/* Styling for social media links */
+.social-icons {
+  color: #fff; /* Text color */
+  font-size: 50px; /* Increase the font size for bigger icons */
+}
+
+/* Styling for contact form within the footer */
+.contact-form {
+  text-align: center; /* Align center */
+}
+
+/* Styling for text input fields */
+.text-input {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding */
+  margin-bottom: 10px; /* Margin bottom */
+  border: 1px solid #fff; /* Border */
+}
+
+/* Styling for contact button */
+.contact-btn {
+  background-color: #fff; /* Background color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor pointer */
+}
+
+/* Styling for the bottom section of the footer */
+.footer-bottom {
+  text-align: center; /* Align center */
+  margin-top: 50px; /* Add margin to the top */
+}

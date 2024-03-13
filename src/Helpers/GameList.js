@@ -3,6 +3,7 @@ import Invaders from "../assets/Space_invaders.png";
 import Dino from "../assets/dino_chrome.png";
 import DinoGame from "../components/Games/DinoGame";
 import SpaceInvadersGame from "../components/Games/SpaceInvaders";
+import TicTacToe from "../components/Games/TicTacToe";
 import TetrisGame from "../components/Games/tetris";
 import AsteroidsGame from "../components/Games/Asteroids";
 
@@ -20,6 +21,12 @@ export const GameList = [
     description: "Running from extinsion",
     category: "Obstacle runner",
     component: DinoGame,
+  },
+  {
+    name: "Tic Tac Toe",
+    image: Invaders,
+    description: "Arcade",
+    component: TicTacToe,
   },
   {
     name: "Tetris",

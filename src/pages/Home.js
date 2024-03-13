@@ -17,7 +17,7 @@ const games = [
     description: "Description of Game 2",
     category: "Space",
     image: "Space_invaders.png", // Path to game image
-    author: "Jack", // Add author information
+    author: "Jack Aguilera", // Add author information
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const games = [
     description: "Description of Game 3",
     category: "Space",
     image: "alien.png", // Path to game image
-    author: "Kevin", // Add author information
+    author: "Kevin Haro", // Add author information
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const games = [
     description: "Description of Game 4",
     category: "Action",
     image: "tic_tac_toe.png", // Path to game image
-    author: "Dario", // Add author information
+    author: "Dario Betancourth", // Add author information
   },
   {
     id: 5,
@@ -41,13 +41,40 @@ const games = [
     description: "Description of Game 5",
     category: "Puzzle",
     image: "tic_tac_toe.png", // Path to game image
-    author: "Yuri", // Add author information
+    author: "Yuri Zanini", // Add author information
   },
 
   {
     id: 6,
     title: "Place holder",
     description: "Description of Game 6",
+    category: "Adventure",
+    image: "tic_tac_toe.png", // Path to game image
+    author: "Augusto Freire", // Add author information
+  },
+
+  {
+    id: 7,
+    title: "Place holder",
+    description: "Description of Game 7",
+    category: "Adventure",
+    image: "tic_tac_toe.png", // Path to game image
+    author: "Adrian Oittan", // Add author information
+  },
+
+  {
+    id: 8,
+    title: "Place holder",
+    description: "Description of Game 8",
+    category: "Adventure",
+    image: "tic_tac_toe.png", // Path to game image
+    author: "Augusto Freire", // Add author information
+  },
+
+  {
+    id: 9,
+    title: "Place holder",
+    description: "Description of Game 9",
     category: "Adventure",
     image: "tic_tac_toe.png", // Path to game image
     author: "Augusto Freire", // Add author information
