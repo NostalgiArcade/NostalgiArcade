@@ -1,8 +1,8 @@
 .navbar {
-  position:fixed; /* Make the navbar fixed */
-    top: 50px; /* Position it at the top of the viewport */
-    left: 50px; /* Add some space from the left side */
-    right: 50px; /* Add some space from the right side */
+  position:absolute; /* Make the navbar fixed */
+    top: 0px; /* Position it at the top of the viewport */
+    left: 20px; /* Add some space from the left side */
+    right: 20px; /* Add some space from the right side */
     display: flex;
     justify-content: space-between;
     align-items: center;

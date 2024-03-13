@@ -40,5 +40,4 @@ const CategoriesBar = ({ categories, onSelectCategory }) => {
     </div>
   );
 };
-
 export default CategoriesBar;
