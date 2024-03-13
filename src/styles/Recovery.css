@@ -1,0 +1,72 @@
+/* Recovery.css */
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .background {
+    background-image: url('background.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .centered-content {
+    text-align: center;
+  }
+  
+  .forgot-credentials-container {
+    background-color: rgba(60, 17, 100, 0.8); /* Semi-transparent background color */
+    padding: 40px;
+    border-radius: 20px;
+    color: #fff;
+    width: 300px;
+    max-width: 80%;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #53316f;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  button {
+    background-color: #c77a15;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #000000;
+  }
+  
+  #back-to-login-link {
+    margin-top: 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  #back-to-login-link:hover {
+    color: #c77a15;
+  }
+  
