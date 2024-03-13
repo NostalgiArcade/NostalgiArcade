@@ -1,0 +1,141 @@
+.about-container {
+    margin-top: 950px; /* Adjust the initial margin as needed */
+    padding-top: 0%; /* Add padding to the top */
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        margin-top: 650px; /* Adjust margin for smaller screens */
+        padding-top: 0px; /* Add padding for smaller screens */
+    }
+}
+
+/* About.css */
+.nostalgi-arcade {
+	font-family: 'Press Start 2P', cursive;
+  }
+  
+
+.section-white {
+	/* background: #fff; */
+	padding: 70px 0;
+}
+
+.team-item {
+    background: transparent; /* Set background to transparent */
+    text-align: center;
+    margin: 20px 0;
+    padding: 50px 20px 40px 20px;
+    border: 2px solid #f4f5f6; /* Add a solid border */
+    border-radius: 8px; /* Add border-radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    transition: all 0.25s ease-in-out;
+}
+
+.team-item:hover {
+    background: #ff8a5f;
+    color: white;
+}
+
+.team-item h3 {
+    margin: 20px 0 1px 0!important;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .25s ease-in-out;
+}
+
+.team-item:hover h3 {
+    color: white;
+}
+
+.team-info {
+    display: block;
+    margin-bottom: 0;
+}
+
+.team-item:hover .team-info p {
+    color: white;
+}
+
+.team-info p {
+    color: white;
+    font-style: italic;
+}
+
+.team-info::after {
+    background: #008aff;
+    background: -webkit-linear-gradient(135deg, #6B02FF 0%, #985BEF 100%);
+    background: -o-linear-gradient(bottom right, #6B02FF, #985BEF);
+    background: -moz-linear-gradient(bottom right, #008aff, #1ad2fd);
+    background: linear-gradient(135deg, #6B02FF 0%, #985BEF 100%);
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 50px;
+    height: 3px;
+}
+
+.team-img {
+    max-width: 140px;
+    padding: 6px 6px;
+    background-color: #dedede;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.team-item p {
+    color: white; /* Desired text color */
+}
+
+ul.team-icon {
+    margin-top: 25px;
+    text-align: center;
+    display: inline-flex;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul.team-icon li {
+    margin: 0 10px;
+}
+
+ul.team-icon li a {
+    margin: 0;
+    display: inline-block;
+    padding: 8px 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    line-height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+
+ul.team-icon li a.instagram {
+    background-color: #e240ff;
+}
+
+ul.team-icon li a.pinterest {
+    background-color: #c92228;
+}
+
+ul.team-icon li a.facebook {
+    background-color: #3b5998;
+}
+
+ul.team-icon li a.dribble {
+    background-color: #ea4c89;
+}
+
+.team-icon li a:hover {
+    color: #dedede;
+    transition: all 0.25s ease-in-out;
+}
+
+.section-title {
+    color: white;
+}
