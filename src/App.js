@@ -11,6 +11,7 @@ import DinoGame from "./components/Games/DinoGame";
 
 import SpaceInvadersGame from "./components/Games/SpaceInvaders";
 import AsteroidsGame from "./components/Games/Asteroids";
+import BreakoutGame from "./components/Games/Breakout";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import CategoriesBar from "./components/CategoriesBar";
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
           <Route path="/games/asteroids" element={<AsteroidsGame />} />
+          <Route path="/games/breakout" element={<BreakoutGame />} />
           <Route path="/About" element={<About />} />
           <Route path="/games/dinointerface" element={<DinoGame />} />
         </Routes>

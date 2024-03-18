@@ -4,6 +4,7 @@ import Dino from "../assets/dino_chrome.png";
 import DinoGame from "../components/Games/DinoGame";
 import SpaceInvadersGame from "../components/Games/SpaceInvaders";
 import AsteroidsGame from "../components/Games/Asteroids";
+import BreakoutGame from "../components/Games/Breakout";
 
 export const GameList = [
   {
@@ -27,5 +28,11 @@ export const GameList = [
     image: Invaders,
     description: "Arcade",
     component: AsteroidsGame,
-  }
+  },
+  {
+    name: "Breakout",
+    image: Invaders,
+    description: "Arcade",
+    component: BreakoutGame,
+  },
 ];
