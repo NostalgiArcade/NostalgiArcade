@@ -14,7 +14,7 @@ const games = [
   {
     id: 2,
     title: "Space Invaders",
-    description: "Description of Game 2",
+    description: "Space vertical shooter",
     category: "Space",
     image: "Space_invaders.png", // Path to game image
     author: "Jack Aguilera", // Add author information
@@ -29,11 +29,11 @@ const games = [
   },
   {
     id: 4,
-    title: "Place holder",
-    description: "Description of Game 4",
+    title: "Dino Game",
+    description: "Running from extinsion",
     category: "Action",
-    image: "tic_tac_toe.png", // Path to game image
-    author: "Dario Betancourth", // Add author information
+    image: "dino_chrome.png", // Path to game image
+    author: "Jack Aguilera ", // Add author information
   },
   {
     id: 5,

@@ -12,7 +12,7 @@ function Games() {
         {GameList.map((game, key) => (
           <Link
             key={key}
-            to={`/games/${game.name.toLowerCase().replace(" ", "")}`}
+            to={`/games/${game.name.toLowerCase().replace(/\s/g, "")}`}
           >
             <div>
               <img src={game.image} alt={game.name} />
@@ -27,7 +27,7 @@ function Games() {
         {GameList.map((game, key) => (
           <Route
             key={key}
-            path={`/games/${game.name.toLowerCase().replace(" ", "")}`}
+            path={`/games/${game.name.toLowerCase().replace(/\s/g, "")}`}
             element={
               <GameInterface>
                 {React.createElement(game.component)}

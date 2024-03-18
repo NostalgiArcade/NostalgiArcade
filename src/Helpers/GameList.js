@@ -19,26 +19,28 @@ export const GameList = [
     name: "Dino Game",
     image: Dino,
     description: "Running from extinsion",
-    category: "Obstacle runner",
+    category: "Aventure",
     component: DinoGame,
   },
-  {
+  { 
     name: "Tic Tac Toe",
     image: Invaders,
     description: "Arcade",
+    category: "Strategy",
     component: TicTacToe,
   },
   {
     name: "Tetris",
     image: Dino,
     description: "asdfasd",
-    category: "strategy",
+    category: "Strategy",
     component: TetrisGame,
   },
   {
     name: "Asteroids",
     image: Invaders,
     description: "Arcade",
+    category: "Space",
     component: AsteroidsGame,
   }
 ];

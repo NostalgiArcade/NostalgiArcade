@@ -35,18 +35,18 @@ function Footer() {
             <li>+1 (561) 456-789</li> {/* Phone number */}
             <li>customerservice@nostalgicarcade.com</li> {/* Email */}
           </ul>
-            <h2>Subscribe for Updates</h2>
-            <form className="subscribe-form">
-              <input
-                type="email"
-                name="email"
-                className="text-input"
-                placeholder="Enter your email address"
-              />
-              <button type="submit" className="btn btn-big">
-                Subscribe
-              </button>
-            </form>
+          <h2>Subscribe for Updates</h2>
+          <form className="subscribe-form">
+            <input
+              type="email"
+              name="email"
+              className="text-input"
+              placeholder="Enter your email address"
+            />
+            <button type="submit" className="btn btn-big">
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
       <div className="footer-bottom">
@@ -59,4 +59,3 @@ function Footer() {
 }
 
 export default Footer;
-
