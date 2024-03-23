@@ -1,83 +1,4 @@
-// import React, { useEffect } from "react";
-// import { P5Wrapper } from "react-p5-wrapper"
 
-// function PongGame(p) {
-//   useEffect(() => {
-//   let isGameOver = false;
-//   let isGameStarted = false;
-//   let isPaused = false;
-
-//   return {
-//     update() {
-//       // Here you'll check game state and update game logic accordingly
-//       if (!isGameOver && isGameStarted && !isPaused) {
-//         // Example: Update ball position
-//         movimentaBolinha();
-//         verificaColisaoBorda();
-//         movimentaRaqueteOponentePc();
-//         marcaPonto();
-//         bolinhaNaoFicaPresa();
-//       }
-//     },
-
-//     render() {
-//       // Based on the game state, render the game components
-//       if (!isGameOver && isGameStarted && !isPaused) {
-//         background(0); // Clear the canvas
-//         mostraBolinha();
-//         mostraRaquete(xRaquete, yRaquete);
-//         mostraRaquete(xRaqueteOponente, yRaqueteOponente);
-//         incluiPlacar();
-//       } else if (isGameOver) {
-//         // Code to display game over screen goes here
-//       }
-//     },
-
-//     start() {
-//       isGameStarted = true;
-//     },
-
-//     pause() {
-//       isPaused = !isPaused;
-//     },
-
-//     gameOver() {
-//       isGameOver = true;
-//     },
-//   };
-
-//   p.setup = function ()  {
-//   p.createCanvas(600, 400);
-//   game = GameComponent();
-//   trilha.loop();
-//   game.start();
-// }
-
-// // function draw() {
-// //   game.update();
-// //   game.render();
-// // }
-
-// //variaveis da bolinha
-// let xBolinha = 300;
-// let yBolinha = 200;
-// let diametro = 20;
-// let raio = diametro/2;
-
-// //velocidade da bolinha
-// let velocidadeXBolinha = 6;
-// let velocidadeYBolinha = 6;
-
-// //variaveis da raquete
-// let xRaquete = 5;
-// let yRaquete = 150;
-// let raqueteComprimento = 10;
-// let raqueteAltura = 90;
-
-// //variaveis do oponente
-// let xRaqueteOponente = 585;
-// let yRaqueteOponente = 150;
-// let velocidadeYOponente;
 
 // let colidiu = false;
 
@@ -93,19 +14,76 @@
 // //erro do oponente
 // let chanceDeErrar = 0;
 
+// // Key controls
+// let upPressed = false;
+// let downPressed = false;
+
+// // Event listeners for key presses
+// document.addEventListener('keydown', (event) => {
+//   if (event.key === 'ArrowUp') {
+//       upPressed = true;
+//   } else if (event.key === 'ArrowDown') {
+//       downPressed = true;
+//   }
+// });
+
+// document.addEventListener('keyup', (event) => {
+//   if (event.key === 'ArrowUp') {
+//       upPressed = false;
+//   } else if (event.key === 'ArrowDown') {
+//       downPressed = false;
+//   }
+// });
+
+// function draw() {
+//   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//   mostraBolinha();
+//   movimentaBolinha();
+//   verificaColisaoBorda();
+//   mostraRaquete(xRaquete, yRaquete);
+//   movimentaMinhaRaquete();
+//   mostraRaquete(xRaqueteOponente, yRaqueteOponente);
+//   verificaColisaoRaqueteBiblioteca(xRaquete, yRaquete);
+//   verificaColisaoRaqueteBiblioteca(xRaqueteOponente, yRaqueteOponente);
+//   incluiPlacar();
+//   marcaPonto();
+//   movimentaRaqueteOponentePc();
+//   bolinhaNaoFicaPresa();
+
+//   window.requestAnimationFrame(draw);
+// }
+
+// // Convert p5.js specific functions to vanilla JS
+// function mostraBolinha() {
+//   ctx.beginPath();
+//   ctx.arc(xBolinha, yBolinha, raio, 0, Math.PI * 2);
+//   ctx.fill();
+//   ctx.closePath();
+// }
+
+// function mostraRaquete(x, y) {
+//   ctx.fillRect(x, y, raqueteComprimento, raqueteAltura);
+// }
+
+// window.requestAnimationFrame(draw);
+
+// setup();
+// });
+
 // function preload(){
 //   trilha = loadSound("trilha.mp3");
 //   ponto = loadSound("ponto.mp3");
 //   raquetada = loadSound("raquetada.mp3");
 // }
 
-// // function setup() {
-// //   createCanvas(600, 400);
-// //   trilha.loop();
-// // }
+// function setup() {
+//   createCanvas(600, 400);
+//   trilha.loop();
+// }
 
-// p.draw = function () {{
-//   p.background(0);
+// function draw() {
+//   background(0);
 //   mostraBolinha();
 //   movimentaBolinha();
 //   verificaColisaoBorda();
@@ -121,12 +99,10 @@
 //   marcaPonto();
 //   movimentaRaqueteOponentePc();
 //   bolinhaNaoFicaPresa();
-//   game.update();
-//   game.render();
 // }
 
 // function mostraBolinha(){
-//   p.circle(xBolinha, yBolinha, diametro);
+//   circle(xBolinha, yBolinha, diametro);
 // }
 
 // function movimentaBolinha(){
@@ -237,16 +213,103 @@
 //     xBolinha = 23;
 //   }
 // }
-// }
-// }, []); // Empty dependency array ensures that the effect runs only once when the component mounts
 
-// return (
-//   <div>
-//     <h2>Space Invaders Game</h2>
-//     <P5Wrapper sketch={PongGame} />
-//     <canvas id="board" />
-//   </div>
-// );
-// };
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.createElement('canvas');
+  document.body.appendChild(canvas);
+  canvas.width = 600;
+  canvas.height = 400;
+  const ctx = canvas.getContext('2d');
 
-// export default PongGame;
+  let xBolinha = 300, yBolinha = 200, diametro = 20;
+  let velocidadeXBolinha = 6, velocidadeYBolinha = 6;
+  let raio = diametro / 2;
+
+  let xRaquete = 5, yRaquete = 150;
+  let xRaqueteOponente = 585, yRaqueteOponente = 150;
+  let raqueteComprimento = 10, raqueteAltura = 90;
+
+  let meusPontos = 0, pontosOponente = 0;
+  let upPressed = false, downPressed = false;
+
+  // Sound effects
+  let trilha = new Audio('trilha.mp3');
+  let ponto = new Audio('ponto.mp3');
+  let raquetada = new Audio('raquetada.mp3');
+
+  // Event listeners for key presses
+  document.addEventListener('keydown', event => {
+      if (event.key === 'ArrowUp') upPressed = true;
+      if (event.key === 'ArrowDown') downPressed = true;
+  });
+
+  document.addEventListener('keyup', event => {
+      if (event.key === 'ArrowUp') upPressed = false;
+      if (event.key === 'ArrowDown') downPressed = false;
+  });
+
+  function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      drawBall();
+      moveBall();
+      checkCollisionWithWalls();
+      drawPaddle(xRaquete, yRaquete);
+      moveMyPaddle();
+      drawPaddle(xRaqueteOponente, yRaqueteOponente);
+      checkScore();
+      moveOpponentPaddle();
+
+      requestAnimationFrame(draw);
+  }
+
+  function drawBall() {
+      ctx.beginPath();
+      ctx.arc(xBolinha, yBolinha, raio, 0, Math.PI * 2);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      ctx.closePath();
+  }
+
+  function moveBall() {
+      xBolinha += velocidadeXBolinha;
+      yBolinha += velocidadeYBolinha;
+  }
+
+  function checkCollisionWithWalls() {
+      if (xBolinha + raio > canvas.width || xBolinha - raio < 0) {
+          velocidadeXBolinha *= -1;
+      }
+      if (yBolinha + raio > canvas.height || yBolinha - raio < 0) {
+          velocidadeYBolinha *= -1;
+      }
+  }
+
+  function drawPaddle(x, y) {
+      ctx.fillRect(x, y, raqueteComprimento, raqueteAltura);
+  }
+
+  function moveMyPaddle() {
+      if (upPressed) yRaquete -= 10;
+      if (downPressed) yRaquete += 10;
+      yRaquete = Math.max(0, Math.min(canvas.height - raqueteAltura, yRaquete));
+  }
+
+  function checkScore() {
+      if (xBolinha < 0 || xBolinha > canvas.width) {
+          if (xBolinha > canvas.width) meusPontos++;
+          else pontosOponente++;
+          xBolinha = canvas.width / 2;
+          yBolinha = canvas.height / 2;
+          ponto.play();
+      }
+  }
+
+  function moveOpponentPaddle() {
+      let paddleCenter = yRaqueteOponente + raqueteAltura / 2;
+      if (paddleCenter < yBolinha) yRaqueteOponente += 4;
+      else if (paddleCenter > yBolinha) yRaqueteOponente -= 4;
+  }
+
+  draw();
+});
