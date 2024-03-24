@@ -6,6 +6,7 @@ import SpaceInvadersGame from "../components/Games/SpaceInvaders";
 import TicTacToe from "../components/Games/TicTacToe";
 import TetrisGame from "../components/Games/tetris";
 import AsteroidsGame from "../components/Games/Asteroids";
+import BreakoutGame from "../components/Games/Breakout";
 
 export const GameList = [
   {
@@ -40,5 +41,11 @@ export const GameList = [
     image: Invaders,
     description: "Arcade",
     component: AsteroidsGame,
-  }
+  },
+  {
+    name: "Breakout",
+    image: Invaders,
+    description: "Arcade",
+    component: BreakoutGame,
+  },
 ];

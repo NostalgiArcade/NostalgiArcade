@@ -11,6 +11,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import DinoGame from "./components/Games/DinoGame";
 import AsteroidsGame from "./components/Games/Asteroids";
+import BreakoutGame from "./components/Games/Breakout";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import CategoriesBar from "./components/CategoriesBar";
+
 
 function App() {
   return (
@@ -27,6 +31,7 @@ function App() {
           <Route path="/games/tictactoe" element={<TicTacToe />} />
           <Route path="/games/dinogame" element={<DinoGame />} />
           <Route path="/games/asteroids" element={<AsteroidsGame />} />
+          <Route path="/games/breakout" element={<BreakoutGame />} />
           <Route path="/About" element={<About />} />
         </Routes>
         <br />
