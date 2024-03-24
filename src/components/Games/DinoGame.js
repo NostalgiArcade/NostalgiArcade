@@ -39,40 +39,51 @@ const DinoGame = () => {
   };
 
   const spawnObstacle = () => {
-    const obstacle = {
-      x: canvasRef.current.width,
-      y: canvasRef.current.height - 50,
-      width: 30,
-      height: 30,
-      color: "#FF5722",
-      speed: 5,
-    };
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const obstacle = {
+        x: canvas.width,
+        y: canvas.height - 50,
+        width: 30,
+        height: 30,
+        color: "#FF5722",
+        speed: 5,
+      };
 
-    obstacles.push(obstacle);
+      obstacles.push(obstacle);
 
-    setTimeout(spawnObstacle, Math.random() * 2000 + 1000);
+      setTimeout(spawnObstacle, Math.random() * 2000 + 1000);
+    }
   };
 
   const update = () => {
     requestAnimationFrame(update);
 
-    context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+    // Add a null check for canvasRef.current
+    if (canvasRef.current) {
+      context.clearRect(
+        0,
+        0,
+        canvasRef.current.width,
+        canvasRef.current.height
+      );
 
-    if (dino.jumping) {
-      dino.y -= 10;
-      jumpCount++;
+      if (dino.jumping) {
+        dino.y -= 10;
+        jumpCount++;
 
-      if (jumpCount > 20) {
-        dino.jumping = false;
+        if (jumpCount > 20) {
+          dino.jumping = false;
+        }
+      } else if (dino.y < canvasRef.current.height - dino.height) {
+        dino.y += gravity;
       }
-    } else if (dino.y < canvasRef.current.height - dino.height) {
-      dino.y += gravity;
+
+      drawDino();
+      drawObstacles();
+
+      checkCollision();
     }
-
-    drawDino();
-    drawObstacles();
-
-    checkCollision();
   };
 
   const drawDino = () => {
@@ -101,15 +112,20 @@ const DinoGame = () => {
         dino.y < obstacle.y + obstacle.height &&
         dino.y + dino.height > obstacle.y
       ) {
-        // gameOver();
+        // Handle collision logic (e.g., game over)
+        alert("Game Over!");
+        resetGame();
       }
     }
   };
 
-  // const gameOver = () => {
-  //   // alert("Game Over!");
-  //   document.location.reload();
-  // };
+  const resetGame = () => {
+    // Reset the game state, e.g., clear obstacles, reset dino position, etc.
+    obstacles = [];
+    dino.y = canvasRef.current.height - 50;
+    jumpCount = 0;
+    spawnObstacle();
+  };
 
   return (
     <div>
