@@ -1,8 +1,4 @@
 .navbar {
-  position:fixed; /* Make the navbar fixed */
-    top: 50px; /* Position it at the top of the viewport */
-    left: 50px; /* Add some space from the left side */
-    right: 50px; /* Add some space from the right side */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,36 +7,32 @@
     border-radius: 40px; /* Apply border-radius for rounded edges */
     box-shadow: 0 0 12px 8px rgba(255, 106, 0, 0.5); /* Orange ombre effect */
   }
-
+  
 .left_nav {
-    display: flex;
-    align-items: center; /* Center items vertically */
-  }
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
 
 /* Adjustments for logo */
 .left_nav img {
-    max-width: 100px; /* Adjust the maximum width of the logo */
-    height:auto; /* Allow the height to adjust proportionally */
-  }
+  max-width: 100px; /* Adjust the maximum width of the logo */
+  height: auto; /* Allow the height to adjust proportionally */
+}
 
-  .left_nav h3 {
-    display: inline; /* or inline-block */
-    margin-left: 0px; /* Add some margin between the logo and the text */
-    color: white; /* Adjust text color as needed */
-  }
-  
-  /* Styles for links */
-  .navbar a {
-    color: white; /* Change link color as needed */
-    text-decoration: none;
-    margin: 0 10px; /* Add margin between links */
-  }
-  
-  /* Hover effect for links */
-  .navbar a:hover {
-    text-decoration: underline; /* Add underline effect on hover */
-  }
-  
+.left_nav h3 {
+  display: inline; /* or inline-block */
+  margin-left: 0px; /* Add some margin between the logo and the text */
+  color: white; /* Adjust text color as needed */
+}
 
+/* Styles for links */
+.navbar a {
+  color: white; /* Change link color as needed */
+  text-decoration: none;
+  margin: 0 10px; /* Add margin between links */
+}
 
-  
+/* Hover effect for links */
+.navbar a:hover {
+  text-decoration: underline; /* Add underline effect on hover */
+}

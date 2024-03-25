@@ -1,19 +1,18 @@
 /* categoriesBar.css */
-
-.categoryTitleColor{
-  color: white;
-}
+.categoryTitleColor {
+  color: white; /* Set the color of the category title */
+  margin: 20px; /* Add margin to the bottom of the category title */
+} 
 
 .category-line {
   border-top: 2px solid white; /* Set the color and thickness of the line */
-  margin-top: 20px; /* Adjust the margin as needed */
 }
 
 .categories-bar {
-  justify-content: space-between;
+  justify-content: space-between; /* Adjust the space between the category bar and the buttons */
   background-color: transparent;
   padding: 10px;
-  margin-top: 0px; /* Add margin to the top of the category bar */
+  margin-top: 10px; /* Add margin to the top of the category bar */
 }
 
 .category-button {
@@ -22,8 +21,8 @@
   border-radius: 25px; /* Adjust the border-radius to make the buttons rounded */
   padding: 8px 16px;
   transition: background-color 0.3s ease; /* Smooth transition for the background color */
-  margin-right: 40px; /* Adjust the margin to add space between buttons */
-  width: 130px; /* Set the width of the buttons as per your preference */
+  margin-right: 80px; /* Adjust the margin to add space between buttons */
+  width: 127px; /* Set the width of the buttons as per your preference */
 }
 
 .category-button:hover {

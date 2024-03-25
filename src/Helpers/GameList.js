@@ -3,6 +3,9 @@ import Invaders from "../assets/Space_invaders.png";
 import Dino from "../assets/dino_chrome.png";
 import DinoGame from "../components/Games/DinoGame";
 import SpaceInvadersGame from "../components/Games/SpaceInvaders";
+import TicTacToe from "../components/Games/TicTacToe";
+import TetrisGame from "../components/Games/tetris";
+import AsteroidsGame from "../components/Games/Asteroids";
 
 export const GameList = [
   {
@@ -11,14 +14,33 @@ export const GameList = [
     description: "Space vertical shooter",
     category: "Arcade",
     component: SpaceInvadersGame,
-    interface: "",
   },
   {
     name: "Dino Game",
     image: Dino,
     description: "Running from extinsion",
-    category: "Obstacle runner",
+    category: "Aventure",
     component: DinoGame,
-    interface: "DinoInterface",
   },
+  { 
+    name: "Tic Tac Toe",
+    image: Invaders,
+    description: "Arcade",
+    category: "Strategy",
+    component: TicTacToe,
+  },
+  {
+    name: "Tetris",
+    image: Dino,
+    description: "asdfasd",
+    category: "Strategy",
+    component: TetrisGame,
+  },
+  {
+    name: "Asteroids",
+    image: Invaders,
+    description: "Arcade",
+    category: "Space",
+    component: AsteroidsGame,
+  }
 ];
