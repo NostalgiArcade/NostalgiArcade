@@ -3,7 +3,7 @@ import Invaders from "../assets/Space_invaders.png";
 import Dino from "../assets/dino_chrome.png";
 import DinoGame from "../components/Games/DinoGame";
 import SpaceInvadersGame from "../components/Games/SpaceInvaders";
-import TetrisGame from "../components/Games/tetris";
+import Tetris from "../components/Tetris";
 import AsteroidsGame from "../components/Games/Asteroids";
 
 export const GameList = [
@@ -26,7 +26,7 @@ export const GameList = [
     image: Dino,
     description: "asdfasd",
     category: "strategy",
-    component: TetrisGame,
+    component: Tetris,
   },
   {
     name: "Asteroids",
