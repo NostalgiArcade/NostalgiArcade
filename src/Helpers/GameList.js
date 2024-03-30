@@ -1,7 +1,7 @@
 // /src/Helpers/GameList.js
 import Invaders from "../assets/Space_invaders.png";
 import SpaceInvadersGame from "../components/Games/SpaceInvaders";
-import PongGame from "../components/Games/p5-pong/sketch";
+import PongGame from "../components/Games/p5-pong/PongGame";
 
 export const GameList = [
   {
@@ -11,7 +11,7 @@ export const GameList = [
     component: SpaceInvadersGame,
   },
   {
-    name: "Pong",
+    name: "PongGame",
     image: Invaders,
     description: "Arcade",
     component: PongGame,

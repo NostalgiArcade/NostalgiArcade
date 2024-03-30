@@ -6,8 +6,9 @@ import Games from "./pages/Games";
 import Login from "./pages/Login";
 import Register from "./pages/Signup";
 import SpaceInvadersGame from "./components/Games/SpaceInvaders";
+import PongGame from "./components/Games/p5-pong/PongGame";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import PongGame from "./components/Games/p5-pong/sketch";
+// import PongGame from "./components/Games/p5-pong/sketch";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
-          <Route path="/games/p5-pong/sketch.js" element={<PongGame />} />
+          <Route path="/games/pong" element={<PongGame />} />
         </Routes>
       </Router>
     </div>
