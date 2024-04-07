@@ -4,89 +4,98 @@ const fs = require('fs');
 const app = express();
 const PORT = 3000;
 const cors = require('cors');
-//connect to redis 
-const options ={
-    origin:"http://127.0.0.1:5500"//allow our fronend to call this backend 
-}
+const uuid = require('uuid'); // Import the UUID library
 
-const Redis = require("redis");//import the redis class from the library
-// Habilitar CORS para todos los orígenes
-app.use(cors(options));//allow frontend to call backend
+// Connect to Redis
+const options = {
+    origin: "http://127.0.0.1:5500" // Allow our frontend to call this backend
+};
 
-// Resto de tu configuración de Express y rutas aquí...
-const redisClient = Redis.createClient(
-    {url : `redis://localhost:6379`}
-);
-redisClient.on("connect", ()=>{
-    console.log("Connection to Redis yes")
-})
+const Redis = require("redis");
+const redisClient = Redis.createClient({ url: `redis://localhost:6379` });
+
+redisClient.on("connect", () => {
+    console.log("Connection to Redis established");
+});
 
 // Helper function to check if user exists in Redis
 function checkUsers(email, callback) {
     redisClient.exists(email, (err, reply) => {
         if (err) {
             console.error('Error checking user existence in Redis:', err);
-            callback(err, null);
-            return;
+            return callback(err, null);
         }
         callback(null, reply === 1);
     });
 }
+
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
 // Serve static files (like HTML, CSS, and client-side JavaScript)
 app.use(express.static('public'));
 
+// Middleware to validate session
+app.use((req, res, next) => {
+    const sessionToken = req.headers['x-session-token']; // Assuming you send the token in the header
+    if (!sessionToken) {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+
+    // Check if the session token exists in Redis
+    redisClient.get(sessionToken, (err, reply) => {
+        if (err) {
+            console.error('Error checking session token in Redis:', err);
+            return res.status(500).json({ message: 'Internal server error' });
+        }
+        if (!reply) {
+            return res.status(401).json({ message: 'Session expired or invalid' });
+        }
+        // Valid session, proceed to the next middleware
+        next();
+    });
+});
+
 // Endpoint to handle signup requests
 app.post('/signup', async (req, res) => {
     try {
-        const {
-            username,
-            email,
-            password
-        } = req.body;
-  
+        const { username, email, password } = req.body;
+
+        // Check if the email already exists
+        const emailExists = await checkUsers(email);
+        if (emailExists) {
+            return res.status(400).json({ message: 'Email already registered' });
+        }
+
+        // Create the user object
         const user = {
-            username,
-            email,
-            password
+            username: username,
+            email: email,
+            // You might want to hash the password before storing it
+            // password: hashPassword(password)
         };
-  
-       
+
+        // Store the user data in Redis
         const userKey = `user:${username}`;
-        await redisClient.json.set(userKey, '.', user);
-        res.status(200).json({ message: 'User successfully stored in Redis' });
-  
+        await redisClient.set(userKey, JSON.stringify(user));
+
+        // Generate a session token
+        const sessionToken = uuid.v4(); // Generate a UUID (you can adjust this as needed)
+
+        // Store the session token in Redis (with an expiration time)
+        redisClient.setex(sessionToken, 3600, userKey); // Expires in 1 hour
+
+        // Respond to the client
+        res.status(200).json({ message: 'Signup successful', sessionToken: sessionToken });
+
     } catch (error) {
-        console.error('Error storing payment in Redis:', error);
-        res.status(500).json({ error: 'Internal server error' });
+        console.error('Error during sign-up:', error);
+        res.status(500).json({ message: 'Internal server error' });
     }
-
-
 });
 
-app.get('/users', async (req, res) => {
-    try {
-      const paymentKeys = await redisClient.keys('user:*');
-  
-      const payments = await Promise.all(paymentKeys.map(async (key) => {
-        return await redisClient.json.get(key, {path: '$'});
-      }));
-  
-      res.json(payments);
-    } catch (error) {
-      console.error('Error retrieving payments from Redis:', error);
-      res.status(500).json({ error: 'Internal server error' });
-    }
-  });
+// Other routes and middleware go here...
 
-function saveUsers(users) {
-    fs.writeFileSync('users.json', JSON.stringify(users, null, 2));
-}
-
-// Start the server
 app.listen(PORT, () => {
-    redisClient.connect()
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
