@@ -1,0 +1,11 @@
+/* PacmanAnimation.css */
+
+/* Styles to make the animation container smaller */
+.animation-container {
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 0 auto;
+  }
+
+  
+  

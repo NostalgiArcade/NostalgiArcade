@@ -1,0 +1,44 @@
+/* Games.css */
+
+/* Category Title */
+.GameLibrary {
+    color: white; /* Set the color of the category title */
+    margin: 20px; /* Add margin to the bottom of the category title */
+}
+
+/* Game List */
+.Gamelist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px; /* Add padding to the game list */
+}
+
+/* Game Item */
+.Gamelist a {
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Set text color */
+    transition: transform 0.3s ease; /* Add transition for smoother hover effect */
+}
+
+.Gamelist a:hover {
+    transform: translateY(-5px); /* Move the item slightly up on hover */
+}
+
+.Gamelist img {
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: 200px; /* Set a fixed height for each image */
+    border-radius: 8px; /* Add some border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.Gamelist h3 {
+    margin-top: 10px; /* Add some space between image and title */
+    font-size: 18px; /* Adjust font size */
+}
+
+.Gamelist p {
+    font-size: 14px; /* Adjust font size */
+    color: #ffffff; /* Set description text color */
+}

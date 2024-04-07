@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import DinoGame from "./components/Games/DinoGame";
 import AsteroidsGame from "./components/Games/Asteroids";
+import Scores from "./pages/Scores"; // Import the Scores component
 
 function App() {
   return (
@@ -19,16 +20,17 @@ function App() {
         <Navbar />
         <br></br>
         <br></br>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/games" element={<Games />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
-          <Route path="/games/tictactoe" element={<TicTacToe />} />
-          <Route path="/games/dinogame" element={<DinoGame />} />
-          <Route path="/games/asteroids" element={<AsteroidsGame />} />
-          <Route path="/About" element={<About />} />
-        </Routes>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/games" element={<Games />} />
+                  <Route path="/Login" element={<Login />} />
+                  <Route path="/Score" element={<Scores />} /> 
+                  <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
+                  <Route path="/games/tictactoe" element={<TicTacToe />} />
+                  <Route path="/games/dinogame" element={<DinoGame />} />
+                  <Route path="/games/asteroids" element={<AsteroidsGame />} />
+                  <Route path="/About" element={<About />} />
+                </Routes>
         <br />
         <br />
         <Footer />

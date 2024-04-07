@@ -6,7 +6,7 @@ const games = [
   {
     id: 1,
     title: "Tic Tac Toe",
-    description: "Description of Game 1",
+    description: "Best strategy wins",
     category: "Strategy",
     image: "tic_tac_toe.png", // Path to game image
     author: "Vida Lima", // Add author information
@@ -21,12 +21,13 @@ const games = [
   },
   {
     id: 3,
-    title: "Alien",
-    description: "Description of Game 3",
-    category: "Space",
-    image: "alien.png", // Path to game image
-    author: "Kevin Haro", // Add author information
+    title: "Tetris",
+    description: "Colorful puzzle",
+    category: "Puzzle",
+    image: "Tetris.png", // Path to game image
+    author: "Yuri Zanini", // Add author information
   },
+
   {
     id: 4,
     title: "Dino Game",
@@ -35,28 +36,28 @@ const games = [
     image: "dino_chrome.png", // Path to game image
     author: "Jack Aguilera ", // Add author information
   },
-  {
-    id: 5,
-    title: "Place holder",
-    description: "Description of Game 5",
-    category: "Puzzle",
-    image: "tic_tac_toe.png", // Path to game image
-    author: "Yuri Zanini", // Add author information
-  },
 
   {
+    id: 5,
+    title: "Alien",
+    description: "Description of Game 3",
+    category: "Space",
+    image: "alien.png", // Path to game image
+    author: "Kevin Haro", // Add author information
+  },
+  {
     id: 6,
-    title: "Place holder",
-    description: "Description of Game 6",
-    category: "Adventure",
-    image: "tic_tac_toe.png", // Path to game image
+    title: "Asteroids",
+    description: "Multidirectional shooter",
+    category: "Space",
+    image: "Asteroids.jpg", // Path to game image
     author: "Augusto Freire", // Add author information
   },
 
   {
     id: 7,
-    title: "Place holder",
-    description: "Description of Game 7",
+    title: "Tetris",
+    description: "Colorful puzzle",
     category: "Adventure",
     image: "tic_tac_toe.png", // Path to game image
     author: "Adrian Oittan", // Add author information
@@ -71,14 +72,6 @@ const games = [
     author: "Augusto Freire", // Add author information
   },
 
-  {
-    id: 9,
-    title: "Place holder",
-    description: "Description of Game 9",
-    category: "Adventure",
-    image: "tic_tac_toe.png", // Path to game image
-    author: "Augusto Freire", // Add author information
-  },
   // Add more games as needed
 ];
 
@@ -100,7 +93,10 @@ const Home = () => {
       setFilteredGames(games);
     } else {
       // Filter games based on the selected category
-      const filtered = games.filter((game) => game.category === categories.find(cat => cat.id === categoryId).name);
+      const filtered = games.filter(
+        (game) =>
+          game.category === categories.find((cat) => cat.id === categoryId).name
+      );
       setFilteredGames(filtered);
     }
   };
@@ -127,6 +123,5 @@ const Home = () => {
     </div>
   );
 };
-
 
 export default Home;
