@@ -13,6 +13,7 @@ import DinoGame from "./components/Games/DinoGame";
 import AsteroidsGame from "./components/Games/Asteroids";
 import BreakoutGame from "./components/Games/Breakout";
 // import CategoriesBar from "./components/CategoriesBar";
+import PongGame from "./components/Games/p5-pong/PongGame";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/games/dinogame" element={<DinoGame />} />
           <Route path="/games/asteroids" element={<AsteroidsGame />} />
           <Route path="/games/breakout" element={<BreakoutGame />} />
+          <Route path="/games/pong" element={<PongGame />} />
           <Route path="/About" element={<About />} />
         </Routes>
         <br />
