@@ -12,7 +12,6 @@ import About from "./pages/About";
 import DinoGame from "./components/Games/DinoGame";
 import AsteroidsGame from "./components/Games/Asteroids";
 import BreakoutGame from "./components/Games/Breakout";
-// import CategoriesBar from "./components/CategoriesBar";
 import PongGame from "./components/Games/p5-pong/PongGame";
 
 
