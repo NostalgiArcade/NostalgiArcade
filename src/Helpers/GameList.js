@@ -6,15 +6,14 @@ import SpaceInvadersGame from "../components/Games/SpaceInvaders";
 import TetrisGame from "../components/Games/tetris";
 import Tetris from "../assets/Tetris.png";
 import AsteroidsGame from "../components/Games/Asteroids";
-
 import Asteroids from "../assets/Asteroids.jpg";
 import TicTacToe from "../components/Games/TicTacToe";
 import TicTacToeImage from "../assets/tic_tac_toe.png";
 import Alien from "../assets/alien.png";
-
-
 import BreakoutGame from "../components/Games/Breakout";
+import Breakout from "../assets/Breakout.png";
 import PongGame from "../components/Games/p5-pong/PongGame";
+import Pong from "../assets/Pong.png";
 
 
 export const GameList = [
@@ -61,19 +60,16 @@ export const GameList = [
     category: "Space",
     component: AsteroidsGame,
 
-  }
-  
-
   },
   {
     name: "Breakout",
-    image: Invaders,
+    image: Breakout,
     description: "Arcade",
     component: BreakoutGame,
   },
   {
     name: "Pong",
-    image: Invaders,
+    image: Pong,
     description: "Arcade",
     component: PongGame,
   },
