@@ -10,7 +10,7 @@
   flex: 0 0 calc(25% - 20px); /* Adjust the width of each card */
   margin: 10px; /* Add margin between cards */
   border-radius: 8px;
-  border:2px solid white; /* Add border to each card */
+  border:2px dotted white; /* Add border to each card */
 
 }
 .game-card img {

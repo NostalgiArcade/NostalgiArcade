@@ -3,11 +3,19 @@ import Invaders from "../assets/Space_invaders.png";
 import Dino from "../assets/dino_chrome.png";
 import DinoGame from "../components/Games/DinoGame";
 import SpaceInvadersGame from "../components/Games/SpaceInvaders";
-import TicTacToe from "../components/Games/TicTacToe";
 import TetrisGame from "../components/Games/tetris";
+import Tetris from "../assets/Tetris.png";
 import AsteroidsGame from "../components/Games/Asteroids";
+
+import Asteroids from "../assets/Asteroids.jpg";
+import TicTacToe from "../components/Games/TicTacToe";
+import TicTacToeImage from "../assets/tic_tac_toe.png";
+import Alien from "../assets/alien.png";
+
+
 import BreakoutGame from "../components/Games/Breakout";
 import PongGame from "../components/Games/p5-pong/PongGame";
+
 
 export const GameList = [
   {
@@ -21,27 +29,41 @@ export const GameList = [
     name: "Dino Game",
     image: Dino,
     description: "Running from extinsion",
-    category: "Obstacle runner",
+    category: "Aventure",
     component: DinoGame,
   },
-  {
+  { 
     name: "Tic Tac Toe",
-    image: Invaders,
-    description: "Arcade",
+    image: TicTacToeImage,
+    description: "Best strategy wins",
+    category: "Strategy",
     component: TicTacToe,
   },
   {
     name: "Tetris",
-    image: Dino,
-    description: "asdfasd",
-    category: "strategy",
+    image: Tetris,
+    description: "Colorful puzzle",
+    category: "Puzzle",
     component: TetrisGame,
   },
   {
     name: "Asteroids",
-    image: Invaders,
-    description: "Arcade",
+    image: Asteroids,
+    description: "Multidirectional shooter",
+    category: "Space",
     component: AsteroidsGame,
+  },
+
+  {
+    name: "Alien",
+    image: Alien,
+    description: "Multidirectional shooter",
+    category: "Space",
+    component: AsteroidsGame,
+
+  }
+  
+
   },
   {
     name: "Breakout",
@@ -55,4 +77,5 @@ export const GameList = [
     description: "Arcade",
     component: PongGame,
   },
+
 ];

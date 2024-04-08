@@ -1,0 +1,31 @@
+/* Scores.css */
+.score-page {
+    max-width: 800px;
+    margin: 20px auto;
+    color: white;
+  }
+  
+  .score-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .score-item {
+    margin-bottom: 10px;
+  }
+  
+  .score-item span {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .score-item button {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25px; /* Adjust the border-radius to make the buttons rounded */
+    transition: background-color 0.3s ease; /* Smooth transition for the background color */
+  }
+  
+  .score-item button:hover {
+    background-color: #f26837; /* Background color on hover */
+  }

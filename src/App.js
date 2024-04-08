@@ -11,8 +11,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import DinoGame from "./components/Games/DinoGame";
 import AsteroidsGame from "./components/Games/Asteroids";
+
+import Scores from "./pages/Scores"; // Import the Scores component
+
 import BreakoutGame from "./components/Games/Breakout";
 import PongGame from "./components/Games/p5-pong/PongGame";
+
 
 
 function App() {
@@ -20,6 +24,21 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
+
+        <br></br>
+        <br></br>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/games" element={<Games />} />
+                  <Route path="/Login" element={<Login />} />
+                  <Route path="/Score" element={<Scores />} /> 
+                  <Route path="/games/spaceinvaders" element={<SpaceInvadersGame />} />
+                  <Route path="/games/tictactoe" element={<TicTacToe />} />
+                  <Route path="/games/dinogame" element={<DinoGame />} />
+                  <Route path="/games/asteroids" element={<AsteroidsGame />} />
+                  <Route path="/About" element={<About />} />
+                </Routes>
+
         <br />
         <br />
         <Routes>
@@ -34,6 +53,7 @@ function App() {
           <Route path="/games/pong" element={<PongGame />} />
           <Route path="/About" element={<About />} />
         </Routes>
+
         <br />
         <br />
         <Footer />

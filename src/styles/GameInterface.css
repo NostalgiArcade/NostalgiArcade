@@ -2,6 +2,7 @@
 
 .GameInterface {
   position: relative;
+  justify-items: center;
 }
 
 .BackButton {
