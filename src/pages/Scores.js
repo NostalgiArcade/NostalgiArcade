@@ -1,6 +1,5 @@
-// ScorePage.js
-
-import React, { useState } from "react";
+// ScoresPage.js
+import React from "react";
 import "../styles/Scores.css"; // Import CSS file
 import GhostAnimation from "../components/GhostAnimation";
 import animationData from "../GhostsAnimation.json";

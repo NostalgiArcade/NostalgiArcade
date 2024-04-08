@@ -10,6 +10,7 @@ const games = [
     category: "Strategy",
     image: "tic_tac_toe.png", // Path to game image
     author: "Vida Lima", // Add author information
+    path: "/games/tictactoe", // Add the path to the game
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const games = [
     category: "Space",
     image: "Space_invaders.png", // Path to game image
     author: "Jack Aguilera", // Add author information
+    path: "/games/spaceinvaders", // Add the path to the game
   },
   {
     id: 3,
@@ -25,7 +27,8 @@ const games = [
     description: "Colorful puzzle",
     category: "Puzzle",
     image: "Tetris.png", // Path to game image
-    author: "Yuri Zanini", // Add author information
+    author: "Dario Betancourth", // Add author information
+    path: "/games/tetris", // Add the path to the game
   },
 
   {
@@ -35,6 +38,7 @@ const games = [
     category: "Action",
     image: "dino_chrome.png", // Path to game image
     author: "Jack Aguilera ", // Add author information
+    path: "/games/dinogame", // Add the path to the game
   },
 
   {
@@ -44,6 +48,7 @@ const games = [
     category: "Space",
     image: "alien.png", // Path to game image
     author: "Kevin Haro", // Add author information
+    path: "/games/alien", // Add the path to the game
   },
   {
     id: 6,
@@ -52,24 +57,27 @@ const games = [
     category: "Space",
     image: "Asteroids.jpg", // Path to game image
     author: "Augusto Freire", // Add author information
+    path: "/games/asteroids", // Add the path to the game
   },
 
   {
     id: 7,
-    title: "Tetris",
-    description: "Colorful puzzle",
+    title: "Pong",
+    description: "Table tennis",
     category: "Adventure",
-    image: "tic_tac_toe.png", // Path to game image
-    author: "Adrian Oittan", // Add author information
+    image: "Pong.png", // Path to game image
+    author: "Yuri Zanini", // Add author information
+    path: "/games/pong", // Add the path to the game
   },
 
   {
     id: 8,
-    title: "Place holder",
-    description: "Description of Game 8",
+    title: "Breakout",
+    description: "Break the rectangles",
     category: "Adventure",
-    image: "tic_tac_toe.png", // Path to game image
+    image: "Breakout.png", // Path to game image
     author: "Augusto Freire", // Add author information
+    path: "/games/breakout", // Add the path to the game
   },
 
   // Add more games as needed
@@ -117,6 +125,7 @@ const Home = () => {
             description={game.description}
             image={require(`../assets/${game.image}`)}
             author={game.author} // Pass the author's name
+            path={game.path} // Pass the path to the game
           />
         ))}
       </div>

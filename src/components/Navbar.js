@@ -12,12 +12,14 @@ function Navbar() {
       </div>
       <div className="right_nav">
         <Link to="/"> Home </Link>
-        <Link to="/Games"> Games </Link>
-        <Link to="/About"> About Us </Link>
-        <Link to="/Score"> Scores </Link>
+        <Link to="/games"> Games </Link>
+        <Link to="/about"> About Us </Link>
+        <Link to="/scores"> Scores </Link>
       </div>
       <div className="login_nav">
-        <h3><Link to="/login"> Login </Link></h3>
+        <h3>
+          <Link to="/login"> Login </Link>
+        </h3>
       </div>
     </div>
   );
