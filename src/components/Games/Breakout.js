@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Breakout = () => {
   const canvasRef = useRef(null);
@@ -27,6 +27,7 @@ const Breakout = () => {
   let textAlpha = 0;
   let text;
   let target = brickRowCount * brickColumnCount;
+  const [gameStarted, setGameStarted] = useState(false); // Add gameStarted state
 
   const TEXT_FADE_TIME = 2.5;
   const FPS = 30;
@@ -55,10 +56,6 @@ const Breakout = () => {
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
 
-    interval = setInterval(draw, 10);
-
-    levelUp(); // Call levelUp function when the game starts
-
     return () => {
       document.removeEventListener("keydown", keyDownHandler);
       document.removeEventListener("keyup", keyUpHandler);
@@ -83,7 +80,6 @@ const Breakout = () => {
   }
 
   function collisionDetection() {
-    
     for (let c = 0; c < brickColumnCount; c++) {
       for (let r = 0; r < brickRowCount; r++) {
         let b = bricks[c][r];
@@ -272,7 +268,7 @@ const Breakout = () => {
     lives = 3;
     brickRowCount = 3;
     levelUp(); // Call levelUp function when the game starts
-    
+
     target = brickRowCount * brickColumnCount;
     console.log(target);
     bricks = [];
@@ -319,8 +315,16 @@ const Breakout = () => {
     clearInterval(interval);
   }
 
+  function startGame() {
+    setGameStarted(true);
+    interval = setInterval(draw, 10);
+  }
+
   return (
     <div>
+      {!gameStarted && (
+        <button onClick={startGame}>Start Game</button>
+      )}
       <canvas
         id="breakoutCanvas"
         ref={canvasRef}
