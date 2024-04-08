@@ -1,11 +1,11 @@
 .about-container {
-    margin-top: 950px; /* Adjust the initial margin as needed */
+    margin-top: 100px; /* Adjust the initial margin as needed */
     padding-top: 0%; /* Add padding to the top */
 }
 
 @media (max-width: 768px) {
     .about-container {
-        margin-top: 650px; /* Adjust margin for smaller screens */
+        margin-top: 50px; /* Adjust margin for smaller screens */
         padding-top: 0px; /* Add padding for smaller screens */
     }
 }
@@ -17,7 +17,7 @@
   
 
 .section-white {
-	/* background: #fff; */
+	background: #11113a;
 	padding: 70px 0;
 }
 
@@ -139,3 +139,28 @@ ul.team-icon li a.dribble {
 .section-title {
     color: white;
 }
+
+.text-container {
+    padding: 20px;
+    font-size: 16px; /* Adjust font size as needed */
+  }
+  
+  .team-item {
+    background: transparent;
+    text-align: center;
+    margin: 20px 0;
+    padding: 50px 20px 40px 20px;
+    border: 2px solid #f4f5f6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .animation-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  /* You may need to adjust other styles as needed */
+  
